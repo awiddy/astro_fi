@@ -1,0 +1,50 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Custom Loan Options",
+    description:
+      "We a wide array of loan products for residential and commercial properties",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Great Rates",
+    description:
+      "Our broad lender network allows us to select the best product for you",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Customer Service",
+    description:
+      "We are proud to provide our clients with fast service and thorough attention to detail",
+    icon: "bx:bxs-data",
+  },
+  
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Lending solutions across the board</h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Astro comes batteries included. It takes the best parts of state-of-the-art
+    tools and adds its own innovations.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
