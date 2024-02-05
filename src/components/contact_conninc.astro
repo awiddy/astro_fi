@@ -1,15 +1,58 @@
+---
+import Contactform from "@components/contactform.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon";
+---
+
 <!-- <h1>Contact Us</h1>    -->
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     Contact Us
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
+  <!-- <p class="text-lg mt-4 text-slate-600" >
+    <a id="anchor-contact"></a>
     Email: stephan@fiwest.com <br><br>
     Phone: (310) 373-2000 ext 100 <br><br>
     Address: 24445 Hawthorne Blvd, Suite 201 <br>
     Torrance, CA 90505
-  </p>
+  </p> -->
 </div>
+<div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <!-- <h2 class="font-medium text-2xl text-gray-800">Contact Astroship</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Have something to say? We are here to help. Fill up the form or send
+          email or call phone.
+        </p> -->
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>
+              24445 Hawthorne Blvd, Suite 201</br>Torrance, CA 90505</br></span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:stephan@fiwest.com"
+              >stephan@fiwest.com</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+              href="tel:+1(310)373-2000">(310) 373-2000 ext 100</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="mt-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.4677029973022!2d-118.35404662369724!3d33.80024153099372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd4b03fcf8cf03%3A0xd45c7cdbb443826a!2s24445%20Hawthorne%20Blvd%2C%20Torrance%2C%20CA%2090505!5e0!3m2!1sen!2sus!4v1707103593001!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+          </br></br>
+          </br></br>
+        </div>
+      </div>
+    </div>
+
 
    
    <iframe
@@ -31,3 +74,5 @@
         >
     </iframe>
     <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+    
