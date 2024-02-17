@@ -2,7 +2,8 @@
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
-import logo_fiwest from "assets/hammockFronds.JPG";
+import logo_fiwest from "assets/logo_small1.JPG";
+import { Picture } from "astro:assets";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
@@ -44,7 +45,15 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-
+        <Picture
+      src={logo_fiwest}
+      alt="Logo"
+      widths={[200, 400, 600]}
+      <!-- sizes="(max-width: 800px) 100vw, 620px" -->
+      sizes="(max-width: 50px) 50vw, 50px"
+      loading="eager"
+      format="avif"
+    />
 
         <a href="/" class="text-lg">
           <span class="font-bold text-slate-800">Finance</span><span
